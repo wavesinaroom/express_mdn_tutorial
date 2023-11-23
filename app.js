@@ -15,7 +15,6 @@ const limiter = RateLimit({
   max:20,
 });
 
-
 var app = express();
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
@@ -37,7 +36,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(compression);
-app.use(limiter);
+app.use(limiter);mongoDB
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
